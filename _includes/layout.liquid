@@ -18,5 +18,16 @@ title: 11ty Boilerplate
         <button @click="generateName()">Generate Name</button>
     </div>
 
+    <script>
+        function nameGenerator() {
+            return {
+                names: ["Khoi", "Leo", "Thomas", "Natty", "Osmand", "Jess", "Aaron", "Jude", "Sam", "Rami"],
+                randomName: "Click the button to see a name!",
+                generateName() {
+                    this.randomName = this.names[Math.floor(Math.random() * this.names.length)];
+                }
+            };
+        }
+    </script>
 </body>
 </html>
